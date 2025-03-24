@@ -1,0 +1,14 @@
+syntax = "proto3";  // 版本
+package fixbug; // 代码所在包，namespace
+
+message LoginRequest{
+    string name = 1;    // 第一个
+    string pwd = 2;
+}
+
+message LoginResponse{
+    int32 errcode = 1;
+    string errmsg = 2;
+    bool success = 3;
+}
+
