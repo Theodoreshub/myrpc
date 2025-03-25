@@ -1,6 +1,10 @@
 syntax = "proto3";  // 版本
 package fixbug; // 代码所在包，namespace
 
+// option 很强大
+// 生成service服务类
+option cc_generic_services = true;
+
 message ResultCode{
     int32 errcode = 1;
     bytes errmsg = 2;
@@ -40,4 +44,10 @@ message User{
 message GetFriendListResponse{
     ResultCode result = 1;
     repeated User friend_list = 2;
+}
+
+// 在 protobuf 里定义 rpc 方法  - service
+service UserServiceRpc{
+    rpc Login(LoginRequest) returns(LoginResponse);
+    rpc GetFriendList(GetFriendListRequest) returns(GetFriendListResponse);
 }
