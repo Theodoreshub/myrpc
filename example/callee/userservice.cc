@@ -1,11 +1,13 @@
 #include <iostream>
 #include <string>
 #include "user.pb.h"
+#include "mprpcapplication.h"
+#include "rpcprovider.h"
 
 /*
 提供两个进程内的本地方法
 */
-class UserService : fixbug::UserServiceRpc  // 服务提供者
+class UserService : public fixbug::UserServiceRpc  // 服务提供者
 {
 public:
     bool Login(std::string name, std::string pwd){
@@ -41,6 +43,17 @@ public:
         }
 };
 
-int main(){
+int main(int argc, char **argv){
+    
+    MprpcApplication::Init(argc, argv);
+    
+    RpcProvider provider;
+    provider.NotifyService(new UserService());
+
+    // Run后阻塞 等待远程的rpc请求
+    provider.Run();
+    
+    
+
     return 0;
 }
