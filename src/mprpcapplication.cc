@@ -2,6 +2,7 @@
 #include <iostream>
 #include <unistd.h>
 #include <string>
+#include "mprpccontroller.h"
 
 MprpcConfig MprpcApplication::m_config;
 

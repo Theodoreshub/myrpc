@@ -4,16 +4,21 @@
 src/CMakeFiles/mprpc.dir/mprpcapplication.cc.o
  ../src/include/mprpcapplication.h
  ../src/include/mprpcconfig.h
+ ../src/include/mprpccontroller.h
  /home/zjl/project/Cpp/mprpc/src/mprpcapplication.cc
 src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o
  ../src/include/mprpcapplication.h
  ../src/include/mprpcchannel.h
  ../src/include/mprpcconfig.h
+ ../src/include/mprpccontroller.h
  ../src/include/rpcheader.pb.h
  /home/zjl/project/Cpp/mprpc/src/mprpcchannel.cc
 src/CMakeFiles/mprpc.dir/mprpcconfig.cc.o
  ../src/include/mprpcconfig.h
  /home/zjl/project/Cpp/mprpc/src/mprpcconfig.cc
+src/CMakeFiles/mprpc.dir/mprpccontroller.cc.o
+ ../src/include/mprpccontroller.h
+ /home/zjl/project/Cpp/mprpc/src/mprpccontroller.cc
 src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o
  ../src/include/rpcheader.pb.h
  /home/zjl/project/Cpp/mprpc/src/rpcheader.pb.cc

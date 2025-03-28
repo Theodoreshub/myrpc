@@ -8,5 +8,6 @@ example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../example/user.pb.
 example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../src/include/mprpcapplication.h
 example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../src/include/mprpcchannel.h
 example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../src/include/mprpcconfig.h
+example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../src/include/mprpccontroller.h
 example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o: ../example/caller/calluserservice.cc
 

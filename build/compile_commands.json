@@ -16,6 +16,11 @@
 },
 {
   "directory": "/home/zjl/project/Cpp/mprpc/build/src",
+  "command": "/usr/bin/g++   -I/home/zjl/project/Cpp/mprpc/src/include -I/home/zjl/project/Cpp/mprpc/example  -g   -o CMakeFiles/mprpc.dir/mprpccontroller.cc.o -c /home/zjl/project/Cpp/mprpc/src/mprpccontroller.cc",
+  "file": "/home/zjl/project/Cpp/mprpc/src/mprpccontroller.cc"
+},
+{
+  "directory": "/home/zjl/project/Cpp/mprpc/build/src",
   "command": "/usr/bin/g++   -I/home/zjl/project/Cpp/mprpc/src/include -I/home/zjl/project/Cpp/mprpc/example  -g   -o CMakeFiles/mprpc.dir/rpcheader.pb.cc.o -c /home/zjl/project/Cpp/mprpc/src/rpcheader.pb.cc",
   "file": "/home/zjl/project/Cpp/mprpc/src/rpcheader.pb.cc"
 },

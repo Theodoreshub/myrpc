@@ -3,6 +3,7 @@
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/message.h>
 
+
 class MprpcChannel : public google::protobuf::RpcChannel{
 public:
     void CallMethod (const google::protobuf::MethodDescriptor* method,

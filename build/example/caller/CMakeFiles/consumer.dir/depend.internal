@@ -9,4 +9,5 @@ example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o
  ../src/include/mprpcapplication.h
  ../src/include/mprpcchannel.h
  ../src/include/mprpcconfig.h
+ ../src/include/mprpccontroller.h
  /home/zjl/project/Cpp/mprpc/example/caller/calluserservice.cc
