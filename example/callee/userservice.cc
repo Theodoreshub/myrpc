@@ -10,8 +10,9 @@
 class UserService : public fixbug::UserServiceRpc  // 服务提供者
 {
 public:
-    bool Login(std::string name, std::string pwd){
+    bool Login(std::string& name, std::string pwd){
         std::cout << "doing local service : Login" << std::endl;
+        return true;
     }
 
     // 这个方法写来给框架直接调用的
@@ -41,8 +42,33 @@ public:
             // 做回调，closure 是一个抽象类,可以给虚函数Run写一些动作，就是序列化和网络发送。
             done->Run();
         }
+
+    bool Register(uint32_t id, std::string name, std::string pwd){
+        std::cout << "doing local service : Register" << std::endl;
+        return true;
+    }
+    
+    void Register(::google::protobuf::RpcController* controller,
+        const ::fixbug::RegisterRequest* request,
+        ::fixbug::RegisterResponse* response,
+        ::google::protobuf::Closure* done){
+
+            uint32_t id = request->id();
+            std::string name = request->name();
+            std::string pwd = request->pwd();
+
+            bool register_result = Register(id, name, pwd);
+            
+            response->mutable_result()->set_errcode(0);
+            response->mutable_result()->set_errmsg("");
+            response->set_success(register_result);
+
+            done->Run();
+            
+        }
 };
 
+// 启动的时候需要读配置文件，ip端口
 int main(int argc, char **argv){
     
     MprpcApplication::Init(argc, argv);
